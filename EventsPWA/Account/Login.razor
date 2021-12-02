@@ -1,0 +1,29 @@
+@page "/https://localhost:5001/account-login"
+
+
+
+<p>
+    <label>
+        Username
+        <input @bind="userName" />
+    </label>
+    <label>
+        Password
+        <input @bind="Password"/>
+    </label>
+    <button @onclick="OnLoginCallback">
+        Login
+    </button>
+</p>
+
+
+
+@code {
+    [Parameter]
+    private string userName{get; set;}
+
+  
+    private Boolean PasswordVisible(){
+        if(Password == true){Password = PasswordVisible;}
+    };
+}
